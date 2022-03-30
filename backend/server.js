@@ -2,6 +2,10 @@ const express = require("express");
 const dotenv = require("dotenv");
 
 const { chats } = require("./data/data");
+const connectDB = require("./config/db");
+
+connectDB();
+
 const app = express();
 dotenv.config();
 
