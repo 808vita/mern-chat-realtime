@@ -11,6 +11,8 @@ const userRoutes = require("./routes/userRoutes");
 
 connectDB();
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
 	res.send("api running ");
 });
