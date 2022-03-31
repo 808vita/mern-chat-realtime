@@ -58,7 +58,7 @@ const Login = () => {
 
 			setTimeout(function () {
 				document.location.reload();
-			}, 5000);
+			}, 4000);
 		} catch (error) {
 			toast({
 				title: "Error Occured!",

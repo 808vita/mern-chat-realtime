@@ -78,6 +78,9 @@ const Signup = () => {
 			localStorage.setItem("userInfo", JSON.stringify(data));
 
 			history.push("/chats");
+			setTimeout(function () {
+				document.location.reload();
+			}, 4000);
 		} catch (error) {
 			toast({
 				title: "Error Occured!",
