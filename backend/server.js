@@ -30,6 +30,13 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
 	console.log(`server stated at port ${PORT}`);
+});
+
+const io = require("socket.io")(server, {
+	pingTimeOut,
+	cors: {
+		origin: "http://localhost:3000",
+	},
 });
