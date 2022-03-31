@@ -28,6 +28,7 @@ import { useToast } from "@chakra-ui/toast";
 
 import { Spinner } from "@chakra-ui/spinner";
 import { ChatState } from "../../Context/ChatProvider";
+import ProfileModal from "./ProfileModal";
 
 const SideDrawer = () => {
 	const [search, setSearch] = useState("");
@@ -77,7 +78,10 @@ const SideDrawer = () => {
 							/>
 						</MenuButton>
 						<MenuList>
-							<MenuItem>My Profile</MenuItem> <MenuDivider />
+							<ProfileModal user={user}>
+								<MenuItem>My Profile</MenuItem>{" "}
+							</ProfileModal>
+							<MenuDivider />
 							<MenuItem onClick={null}>Logout</MenuItem>
 						</MenuList>
 					</Menu>
