@@ -100,11 +100,13 @@ const MyChats = ({ fetchAgain }) => {
 								borderRadius="lg"
 								key={chat._id}
 							>
-								<Text>
-									{!chat.isGroupChat
-										? getSender(loggedUser, chat.users)
-										: chat.chatName}
-								</Text>
+								{loggedUser && (
+									<Text>
+										{!chat.isGroupChat
+											? getSender(loggedUser, chat.users)
+											: chat.chatName}
+									</Text>
+								)}
 								{chat.latestMessage && (
 									<Text fontSize="xs">
 										<b>{chat.latestMessage.sender.name} : </b>
