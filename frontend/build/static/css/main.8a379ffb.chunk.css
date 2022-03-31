@@ -1,2 +1,0 @@
-@import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap);*{box-sizing:border-box}.App{min-height:100vh;display:flex;background-image:url(/static/media/background.3f3ebe19.jpg);background-size:cover;background-position:50%}.messages{display:flex;flex-direction:column;overflow-y:scroll;scrollbar-width:none}.expand-btn-green{width:5%;-webkit-transform:scale(.5);transform:scale(.5);transition:all 1s ease-in}.expand-btn-green:hover{width:100%;-webkit-transform:scale(1);transform:scale(1)}
-/*# sourceMappingURL=main.8a379ffb.chunk.css.map */
