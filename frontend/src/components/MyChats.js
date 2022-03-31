@@ -1,12 +1,10 @@
-import { AddIcon } from "@chakra-ui/icons";
 import { Box, Stack, Text } from "@chakra-ui/layout";
 import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getSender } from "../config/ChatLogics";
 import ChatLoading from "./ChatLoading";
-import GroupChatModal from "./miscellaneous/GroupChatModal";
-import { Button } from "@chakra-ui/react";
+
 import { ChatState } from "../Context/ChatProvider";
 
 const MyChats = ({ fetchAgain }) => {
@@ -91,13 +89,11 @@ const MyChats = ({ fetchAgain }) => {
 								borderRadius="lg"
 								key={chat._id}
 							>
-								{loggedUser && (
-									<Text>
-										{!chat.isGroupChat
-											? getSender(loggedUser, chat.users)
-											: chat.chatName}
-									</Text>
-								)}
+								<Text>
+									{!chat.isGroupChat
+										? getSender(loggedUser, chat.users)
+										: chat.chatName}
+								</Text>
 								{chat.latestMessage && (
 									<Text fontSize="xs">
 										<b>{chat.latestMessage.sender.name} : </b>

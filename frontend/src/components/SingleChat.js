@@ -15,7 +15,8 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "https://chatzzz-mern.herokuapp.com"; // "https://chatzzz-mern.herokuapp.com"; -> After deployment
+const ENDPOINT = "http://localhost:5000";
+//"https://chatzzz-mern.herokuapp.com"; // "https://chatzzz-mern.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
