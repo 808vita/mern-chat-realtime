@@ -8,7 +8,7 @@ function App() {
 	return (
 		<div className="App">
 			<Route exact path="/" component={HomePage} />
-			<Route path="/chat" component={ChatPage} />
+			<Route path="/chats" component={ChatPage} />
 		</div>
 	);
 }
