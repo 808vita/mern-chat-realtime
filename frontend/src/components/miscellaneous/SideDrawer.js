@@ -81,7 +81,6 @@ function SideDrawer() {
 
 			setLoading(false);
 			setSearchResult(data);
-			console.log(data);
 		} catch (error) {
 			toast({
 				title: "Error Occured!",
@@ -216,7 +215,7 @@ function SideDrawer() {
 								/>
 							))
 						)}
-						{console.log(searchResult)}
+
 						{loadingChat && <Spinner ml="auto" d="flex" />}
 					</DrawerBody>
 				</DrawerContent>

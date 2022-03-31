@@ -14,8 +14,8 @@ const Login = () => {
 	const handleClick = () => setShow(!show);
 	const toast = useToast();
 	const history = useHistory();
-	const [email, setEmail] = useState();
-	const [password, setPassword] = useState();
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
 
 	const submitHandler = async () => {
 		if (!email || !password) {
@@ -103,15 +103,15 @@ const Login = () => {
 				Login
 			</Button>
 			<Button
+				className="expand-btn-green"
 				variant="solid"
-				colorScheme="red"
-				width="100%"
+				colorScheme="green"
 				onClick={() => {
-					setEmail("guest@example.com");
-					setPassword("123456");
+					setEmail("woof@woof.com");
+					setPassword("woof");
 				}}
 			>
-				Get Guest User Credentials
+				Test?
 			</Button>
 		</VStack>
 	);

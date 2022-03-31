@@ -4,3 +4,16 @@
   overflow-y: scroll;
   scrollbar-width: none;
 }
+
+
+.expand-btn-green{
+  width:5%;
+  transform: scale(.5);
+  transition:all 1s ease-in;
+}
+
+
+.expand-btn-green:hover{
+  width:100%;
+  transform: scale(1);
+}
